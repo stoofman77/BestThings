@@ -1,20 +1,73 @@
 @font-face {
-    font-family: 'CustomFont'; /* Name your font family */
+    font-family: 'Catchy-Mager'; /* Name your font family */
     src: url('./fonts/catchy-mager/Catchy Mager.ttf'); /* Locate the .ttf file within your directory*/
+}
+@font-face {
+    font-family: 'Cocogoose';
+    src: url('./fonts/cocogoose/Cocogoose-Pro-Semilight-trial.ttf')
+}
+.category-page {
+    animation: grow 1s;
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-self: center;
+}
+.cat-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 350px;
+    height: 250px;
+    margin: 20px;
+    background-color: darkseagreen;
+    border: solid darkolivegreen;
+    border-radius: 50px;
+    font-family: Cocogoose, sans-serif;
+    font-size: 20px;
+    transition: .7s;
+
+}
+.cat-icon > div{
+    margin: 50px;
+}
+.icon-picture {
+    height: 150px;
+    width: 150px;
+    justify-content: left;
+    margin: 25px;
+    align-self: center;
+    border: hidden;
+    border-radius: 25px;
+}
+
+@keyframes grow {
+    0% { transform: scale(.2); }
+    100% { transform: scale(1); }
+
 }
 
 .title-text {
-    font-family: 'CustomFont', sans-serif;
-    margin-top: 250px;
+    font-family: 'Catchy-Mager', sans-serif;
     font-size: 50px;
+    animation: fade-in 1s;
 }
 .subtitle-text {
-    font-family: 'CustomFont', sans-serif;
+    font-family: 'Catchy-Mager', sans-serif;
     font-size: 25px;
+    animation: fade-in 1s;
 }
 #learn-more {
+    animation: fade-up 2s;
+
     background-color: darkcyan;
     color: white;
+    text-decoration: none;
     border: solid darkslategray 3px;
     border-radius: 10px;
     font-weight: bold;
@@ -24,17 +77,21 @@
     height: 45px;
 
 }
-#learn-more:hover {
+#learn-more:hover, .cat-icon:hover {
     transform: scale(110%,110%);
     cursor: pointer;
 }
-.landing-page {
+.landing-page-block-one {
+    height: 725px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
+    background-color: lightslategray;
+
 }
 body {
+
     background-color: #8ca87c;
     margin: 0;
 }
@@ -52,17 +109,15 @@ body {
 }
 
 .head-bar-item {
+
     width: 100px;
-    border: 5px solid darkcyan;
     align-items: center;
     align-content: center;
     align-self: center;
 
-    border-radius: 15px;
     padding: 5px;
     justify-content: center;
     text-align: center;
-    background-color: cadetblue;
     transition: .3s;
 
 }
@@ -75,6 +130,29 @@ body {
 
     width: 30px;
     height: 30px;
+}
+@keyframes fade-up {
+    0% {transform: translate(0,100%); }
+    100% {transform: translate(0, 0%); }
+    0% { opacity: 0}
+    100% { opacity: 1; }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0}
+    100% { opacity: 1; }
+}
+#get-started {
+
+    justify-self: flex-end;
+    width: 100px;
+    padding: 5px;
+    margin-right: 25px;
+    border: 5px solid green;
+    background-color: darkseagreen;
+    border-radius: 10px;
+    text-align: center;
+    transition: .3s;
 }
 #about {
 
@@ -93,43 +171,45 @@ body {
     transform: scale(110%,110%);
     text-shadow: darkcyan;
 }
-/*
+
 .head-bar-item:after {
     content: "";
     position: absolute;
-    background-image: linear-gradient(to right, rgb(0, 217, 255), rgb(0, 4, 255));
+    background-image: linear-gradient(to right, rgb(24,138,141), rgb(96,201,142));
     height: 2px;
-    width: 0%;
+    width: 0;
     left: 15px;
     bottom: +2px;
     transition: 0.3s;
 }
 
 .head-bar-item:hover:after {
-    width: 100%;
+    width: 75%;
 }
-*/
-a:link {
+
+#about:link {
     color: green;
     text-decoration: none;
 
 }
 
-/* visited link */
-a:visited {
+#about:visited {
     color: green;
     text-decoration: none;
 }
 
-/* mouse over link */
-a:hover {
+
+#about:hover {
     color: darkgreen;
     text-decoration: none;
 }
 
-/* selected link */
-a:active {
+#about:active {
     color: darkgreen;
     text-decoration: none;
 }
 
+a:link, a:visited, a:hover, a:active {
+    color: antiquewhite;
+    text-decoration: none;
+}
