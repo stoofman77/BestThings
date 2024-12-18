@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'CustomFont'; /* Name your font family */
+    src: url('./fonts/catchy-mager/Catchy Mager.ttf'); /* Locate the .ttf file within your directory*/
+}
+
+.title-text {
+    font-family: 'CustomFont', sans-serif;
+    margin-top: 250px;
+    font-size: 50px;
+}
+.subtitle-text {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 25px;
+}
+#learn-more {
+    background-color: darkcyan;
+    color: white;
+    border: solid darkslategray 3px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: .7s;
+    margin-top: 20px;
+    width: 125px;
+    height: 45px;
+
+}
+#learn-more:hover {
+    transform: scale(110%,110%);
+    cursor: pointer;
+}
+.landing-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+body {
+    background-color: #8ca87c;
+    margin: 0;
+}
+
+.head-bar {
+    height: 50px;
+    background-color: #8ca87c;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid darkslategray 3px;
+
+
+}
+
+.head-bar-item {
+    width: 100px;
+    border: 5px solid darkcyan;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+
+    border-radius: 15px;
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    background-color: cadetblue;
+    transition: .3s;
+
+}
+
+.logo {
+    flex: 0;
+    justify-self: left;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    width: 30px;
+    height: 30px;
+}
+#about {
+
+    justify-self: flex-end;
+    width: 100px;
+    padding: 5px;
+    margin-right: 25px;
+    border: 5px solid green;
+    background-color: darkseagreen;
+    border-radius: 10px;
+    text-align: center;
+    transition: .3s;
+}
+
+.head-bar-item:hover {
+    transform: scale(110%,110%);
+    text-shadow: darkcyan;
+}
+/*
+.head-bar-item:after {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(0, 217, 255), rgb(0, 4, 255));
+    height: 2px;
+    width: 0%;
+    left: 15px;
+    bottom: +2px;
+    transition: 0.3s;
+}
+
+.head-bar-item:hover:after {
+    width: 100%;
+}
+*/
+a:link {
+    color: green;
+    text-decoration: none;
+
+}
+
+/* visited link */
+a:visited {
+    color: green;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: darkgreen;
+    text-decoration: none;
+}
+
