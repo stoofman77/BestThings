@@ -170,6 +170,7 @@ body {
 .head-bar-item:hover {
     transform: scale(110%,110%);
     text-shadow: darkcyan;
+    cursor: pointer;
 }
 
 .head-bar-item:after {
@@ -210,6 +211,6 @@ body {
 }
 
 a:link, a:visited, a:hover, a:active {
-    color: antiquewhite;
+    color: currentColor;
     text-decoration: none;
 }
