@@ -6,6 +6,7 @@
     font-family: 'Cocogoose';
     src: url('./fonts/cocogoose/Cocogoose-Pro-Semilight-trial.ttf')
 }
+
 .category-page {
     animation: grow 1s;
     display: flex;
@@ -16,7 +17,7 @@
     align-items: center;
     flex-direction: row;
     justify-self: center;
-}
+    }
 .cat-icon {
     display: flex;
     justify-content: center;
@@ -55,15 +56,15 @@
 .title-text {
     font-family: 'Catchy-Mager', sans-serif;
     font-size: 50px;
-    animation: fade-in 1s;
+    animation: fade-in 2s;
 }
 .subtitle-text {
     font-family: 'Catchy-Mager', sans-serif;
     font-size: 25px;
-    animation: fade-in 1s;
+    animation: fade-in 2s;
 }
 #learn-more {
-    animation: fade-up 2s;
+    animation: fade-up 3s;
 
     background-color: darkcyan;
     color: white;
@@ -82,12 +83,13 @@
     cursor: pointer;
 }
 .landing-page-block-one {
-    height: 725px;
+    height: 94.0vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
     background-color: lightslategray;
+
 
 }
 body {
@@ -96,8 +98,63 @@ body {
     margin: 0;
 }
 
+.music-body {
+
+    background-color: dimgrey;
+
+}
+.music-item-container {
+    animation: fade-up 2s;
+    animation-delay: -0.75s;
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    width: 100vw;
+    max-width: 1200px;
+
+}
+.music-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    max-width: 550px;
+    height: calc(35vw * 1.25);
+    max-height: 500px;
+    margin: 10px;
+    border: solid gray 3px;
+    flex-direction: column;
+    transition: .5s;
+    background-color: darkslategray;
+
+}
+.music-item-icon:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.music-item-icon > div {
+    margin: 20px;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+}
+.music-icon-image {
+    height: 55%;
+    width: 80%;
+    max-height: calc(calc(35vw * 1.25)*.6);
+    margin: 20px;
+    justify-self: flex-start;
+    border: solid darkslategray 3px;
+    border-radius: 25px;
+}
+
 .head-bar {
-    height: 50px;
+    height: calc(6.0vh - 3px);
     background-color: #8ca87c;
     display: flex;
     flex-wrap: nowrap;
@@ -132,9 +189,12 @@ body {
     height: 30px;
 }
 @keyframes fade-up {
-    0% {transform: translate(0,100%); }
+
+    0% {color-interpolation: auto}
+    40% {transform: translate(0,100%); }
     100% {transform: translate(0, 0%); }
     0% { opacity: 0}
+    40% { opacity: 0; }
     100% { opacity: 1; }
 }
 
@@ -210,7 +270,10 @@ body {
     text-decoration: none;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link, a:visited, a:hover {
     color: currentColor;
     text-decoration: none;
+}
+a:active {
+    color: darkcyan;
 }
