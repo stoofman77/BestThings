@@ -52,21 +52,37 @@
     100% { transform: scale(1); }
 
 }
+.landing-page-sub-block{
+    width: 50%;
+    height: 20%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(50,50,50,0.7);
+    border-radius: 15px;
+    padding: 50px;
+    backdrop-filter: blur(1px);
 
+}
 .title-text {
     font-family: 'Catchy-Mager', sans-serif;
     font-size: 50px;
     animation: fade-in 2s;
+    color: beige;
 }
 .subtitle-text {
     font-family: 'Catchy-Mager', sans-serif;
     font-size: 25px;
     animation: fade-in 2s;
+    color: beige;
+
 }
 #learn-more {
     animation: fade-up 3s;
 
-    background-color: darkcyan;
+    background-color: darkslategray;
     color: white;
     text-decoration: none;
     border: solid darkslategray 3px;
@@ -89,6 +105,10 @@
     justify-content: center;
     flex-flow: column;
     background-color: lightslategray;
+    background-image: url("./images/Option1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 
 
 }
@@ -127,6 +147,7 @@ body {
     max-height: 500px;
     margin: 10px;
     border: solid gray 3px;
+    border-radius: 25px;
     flex-direction: column;
     transition: .5s;
     background-color: darkslategray;
@@ -155,12 +176,12 @@ body {
 
 .head-bar {
     height: calc(6.0vh - 3px);
-    background-color: #8ca87c;
+    background-color: darkslategray;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    border-bottom: solid darkslategray 3px;
+    border-bottom: solid rgba(50,50,50, .7) 3px;
 
 
 }
@@ -171,7 +192,8 @@ body {
     align-items: center;
     align-content: center;
     align-self: center;
-
+    color: bisque;
+    font-family: "Times New Roman", sans-serif;
     padding: 5px;
     justify-content: center;
     text-align: center;
@@ -220,11 +242,13 @@ body {
     width: 100px;
     padding: 5px;
     margin-right: 25px;
-    border: 5px solid green;
-    background-color: darkseagreen;
+    border: 5px solid rgba(100,100,100,.3);
+    background-color: #2e4f4f;
+    color: wheat;
     border-radius: 10px;
     text-align: center;
     transition: .3s;
+    box-shadow: 2px 2px 1px rgba(50,50,50,0.7);
 }
 
 .head-bar-item:hover {
@@ -248,27 +272,6 @@ body {
     width: 75%;
 }
 
-#about:link {
-    color: green;
-    text-decoration: none;
-
-}
-
-#about:visited {
-    color: green;
-    text-decoration: none;
-}
-
-
-#about:hover {
-    color: darkgreen;
-    text-decoration: none;
-}
-
-#about:active {
-    color: darkgreen;
-    text-decoration: none;
-}
 
 a:link, a:visited, a:hover {
     color: currentColor;
