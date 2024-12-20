@@ -26,24 +26,27 @@
     width: 350px;
     height: 250px;
     margin: 20px;
-    background-color: darkseagreen;
-    border: solid darkolivegreen;
+    background-color: rgba(134,159,167, .5);
+    backdrop-filter: blur(5px);
+    border: solid rgba(47,79,79, .5);
     border-radius: 50px;
+
     font-family: Cocogoose, sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     transition: .7s;
 
 }
 .cat-icon > div{
-    margin: 50px;
+    color: wheat;
+    margin: 30px;
+    padding-right: 10px;
 }
 .icon-picture {
     height: 150px;
     width: 150px;
     justify-content: left;
-    margin: 25px;
+    margin: 40px;
     align-self: center;
-    border: hidden;
     border-radius: 25px;
 }
 
@@ -97,9 +100,11 @@
 #learn-more:hover, .cat-icon:hover {
     transform: scale(110%,110%);
     cursor: pointer;
+    box-shadow: beige 0 0 15px;
+
 }
 .landing-page-block-one {
-    height: 94.0vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,12 +121,16 @@ body {
 
     background-color: #8ca87c;
     margin: 0;
+    border: hidden black;
 }
 
 .music-body {
 
-    background-color: dimgrey;
-
+    margin: 0;
+    background-image: url("./images/music-option-2.jpg");
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .music-item-container {
     animation: fade-up 2s;
@@ -139,18 +148,21 @@ body {
 }
 .music-item-icon {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 40%;
     max-width: 550px;
     height: calc(35vw * 1.25);
+    color: beige;
+    font-size: 20px ;
     max-height: 500px;
-    margin: 10px;
-    border: solid gray 3px;
+    margin: 25px;
+    border: solid rgba(50,50,50, .5) 3px;
+    backdrop-filter: grayscale(100%);
     border-radius: 25px;
-    flex-direction: column;
     transition: .5s;
-    background-color: darkslategray;
+    background-color: rgba(47, 79, 79, .6);
 
 }
 .music-item-icon:hover {
@@ -158,30 +170,40 @@ body {
     cursor: pointer;
 }
 
-.music-item-icon > div {
-    margin: 20px;
-    align-self: center;
-    justify-self: center;
+.music-item-title {
     display: flex;
+    border: solid black;
+    margin: 20px;
+    margin-bottom: 30px;
+    align-self: center;
+    text-align: center;
+    justify-self: center;
 }
 .music-icon-image {
     height: 55%;
     width: 80%;
     max-height: calc(calc(35vw * 1.25)*.6);
     margin: 20px;
+    
     justify-self: flex-start;
-    border: solid darkslategray 3px;
+    align-self: center;
+    border: solid rgba(0,0,0,.3) 3px;
     border-radius: 25px;
 }
 
 .head-bar {
+    position: fixed;
+    padding-top: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
     height: calc(6.0vh - 3px);
     background-color: darkslategray;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    border-bottom: solid rgba(50,50,50, .7) 3px;
+    border-bottom: solid rgba(50,50,50,.7) 3px;
 
 
 }
