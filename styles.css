@@ -116,12 +116,17 @@
 
 
 
+
+}
+.about-title {
+    margin: 6vh;
 }
 body {
 
     background-color: darkslategray;
     margin: 0;
     border: hidden black;
+
 }
 
 .music-body {
@@ -131,6 +136,8 @@ body {
     background-repeat: repeat-y;
     background-attachment: fixed;
     background-size: cover;
+    background-position-x: calc(50%);
+
 }
 .writing-body {
     margin: 0;
@@ -139,6 +146,8 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position-y: center;
+    background-position-x: calc(50%);
+
 }
 .media-body {
     margin: 0;
@@ -146,7 +155,8 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position-x: -75px;
+    background-position-x: calc(50% + 90px);
+
 }
 .music-item-container {
     animation: fade-up 2s;
@@ -163,6 +173,8 @@ body {
 
 }
 .music-item-icon {
+    animation: blur-smooth 2s;
+    animation-delay: .4s;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -182,6 +194,9 @@ body {
 
 }
 .writing-item-icon {
+    animation: blur-smooth 2s;
+    animation-delay: .4s;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,12 +216,17 @@ body {
     background-color: rgba(251,241,218, .2);
 
 }
-.music-item-icon:hover, .writing-item-icon:hover, .media-item-icon {
+.music-item-icon:hover, .writing-item-icon:hover, .media-item-icon, .key-moment-icon:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
 
 .media-item-icon {
+
+    animation: blur-smooth 2s;
+    animation-delay: .4s;
+
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,7 +238,7 @@ body {
     font-size: 20px ;
     max-height: 500px;
     margin: 25px;
-    border: solid rgba(50,0,0, .5) 3px;
+    border: solid rgba(0,0,20, .5) 3px;
 
     backdrop-filter: blur(2px);
     border-radius: 25px;
@@ -228,7 +248,6 @@ body {
 }
 .music-item-title {
     display: flex;
-    border: solid black;
     margin: 20px;
     margin-bottom: 30px;
     align-self: center;
@@ -246,7 +265,36 @@ body {
     border: solid rgba(0,0,0,.3) 3px;
     border-radius: 25px;
 }
+.general-page {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.general-head-text {
+    font-family: Catchy-Mager, sans-serif;
+    font-size: 45px;
+    color: beige;
+    margin: 40px;
+    text-align: center;
+}
+.general-head-image {
+    align-self: center;
+    justify-self: center;
+    max-width: 90vw;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px rgba(0,0,0, .4);
+    max-height: 550px;
+}
+.general-image-subtitle {
+    font-family: Catchy-Mager, sans-serif;
+    font-size: 20px;
+    color: black;
+    margin: 15px;
 
+}
 .head-bar {
     position: fixed;
     padding-top: 0;
@@ -254,6 +302,7 @@ body {
     z-index: 1;
     width: 100%;
     height: calc(6.0vh - 3px);
+    min-height: 40px;
     background-color: darkslategray;
     display: flex;
     flex-wrap: nowrap;
@@ -262,6 +311,43 @@ body {
     border-bottom: solid rgba(50,50,50,.7) 3px;
 
 
+}
+.key-bar-title {
+    background-color: lightsteelblue;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-family: Catchy-Mager,sans-serif;
+    font-size: 50px;
+    position: relative;
+    top: 35px;
+
+}
+.key-moments-bar {
+    border-top: solid black 5px;
+    background-color: rgb(50,50,50);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px 0;
+
+}
+
+.key-moment-icon {
+    display: flex;
+    background-color: wheat;
+    width: 250px;
+    height: 250px;
+    margin: 25px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: .3s;
+}
+.key-image {
+    width: 80%;
+    height: 80%;
 }
 
 .head-bar-item {
@@ -288,9 +374,12 @@ body {
     width: 30px;
     height: 30px;
 }
-@keyframes fade-up {
+@keyframes blur-smooth {
     40% {backdrop-filter: blur(0)}
     100% {backdrop-filter: blur(2px)}
+}
+@keyframes fade-up {
+
     0% {color-interpolation: auto}
     40% {transform: translate(0,100%); }
     100% {transform: translate(0, 0%); }
