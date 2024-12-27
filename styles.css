@@ -219,6 +219,10 @@ body {
 .music-item-icon:hover, .writing-item-icon:hover, .media-item-icon, .key-moment-icon:hover {
     transform: scale(1.05);
     cursor: pointer;
+    .click-change {
+        transform: scale(1.25);
+
+    }
 }
 
 .media-item-icon {
@@ -349,6 +353,11 @@ body {
     width: 80%;
     height: 80%;
 }
+.audio-controls {
+    width: 20%;
+    height: 10%;
+    display: flex;
+}
 
 .head-bar-item {
 
@@ -364,6 +373,16 @@ body {
     transition: .3s;
 
 }
+.click-change {
+    flex: 0;
+    width: 400%;
+    height: 400%;
+    position: relative;
+    bottom: 640%;
+    right: 45%;
+    transition: .5s;
+}
+
 
 .logo {
     flex: 0;

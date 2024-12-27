@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Rach 2</title>
     <link rel="stylesheet" href="../styles.css">
-
+    <script src="../scripts/script.js"></script>
 </head>
 <body>
     <div class="head-bar">
@@ -24,10 +24,24 @@
                 <img class="key-image" src="../images/music-option-1.jpg">
                 <div class="key-subtitle">Mvt 1: dramatic swell</div>
             </div>
-            <div class="key-moment-icon">
+
+            <button onClick="rach2sound1.playSound()"     class="key-moment-icon">
                 <img class="key-image" src="../images/music-option-1.jpg">
                 <div class="key-subtitle">Mvt 1: dramatic swell</div>
-            </div>
+                <div class="audio-controls">
+                    <img class="click-change" id="audio2" src='../images/play.png' alt="da">
+                    <img onclick="rach2sound1.resetSound()" src="../images/restart.png">
+                </div>
+            </button>
+            <button onClick="rach2sound2.playSound()"     class="key-moment-icon">
+                <img class="key-image" src="../images/music-option-1.jpg">
+                <div class="key-subtitle">Mvt 1: dramatic swell</div>
+                <div class="audio-controls">
+                    <img class="click-change" id="audio3" src="../images/play.png" alt="da">
+                    <img onclick="rach2sound2.resetSound()" src="../images/restart.png">
+                </div>
+            </button>
+
             <div class="key-moment-icon">
                 <img class="key-image" src="../images/music-option-1.jpg">
                 <div class="key-subtitle">Mvt 1: dramatic swell</div>
